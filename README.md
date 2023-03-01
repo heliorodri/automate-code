@@ -1,9 +1,17 @@
 # automate-code
-Using AI to automate code. Mostly using for unit test creation
+Integrating AI using openAI library.
+Using this as a study purpose project
 
 
-## First Creat your API Key and then add it to a env variable
+## Steps:
+### Create your API Key and then add it to a env variable
 
     https://platform.openai.com/account/api-keys
 
-export AUTOMATE_CODE_API_KEY=your_key
+### export the api_key to an env variable:
+
+    export AUTOMATE_CODE_API_KEY=your_key
+
+### Execute the main file running the following command from within the project's folder:
+
+    go run main.go
