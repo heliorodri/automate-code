@@ -4,7 +4,7 @@ Using this as a study purpose project
 
 
 ## Steps:
-### Create your API Key using the following URL - this is a one-time-only step
+### Create your API Key using the following URL
 https://platform.openai.com/account/api-keys
 
 ### export the api_key to an env variable:
