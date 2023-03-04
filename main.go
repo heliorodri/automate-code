@@ -16,7 +16,7 @@ func main() {
 
 	scanner := bufio.NewScanner(os.Stdin)
 
-	fmt.Print("Please, ask your question?")
+	fmt.Print("Please, ask your question?\n")
 	scanner.Scan()
 	question := scanner.Text()
 
@@ -28,8 +28,7 @@ func main() {
 func askAI(client gpt3.Client, ctx context.Context, question string) {
 	err := client.CompletionStreamWithEngine(ctx, gpt3.TextDavinci003Engine, gpt3.CompletionRequest{
 		Prompt:    []string{question},
-		MaxTokens: gpt3.IntPtr(3000),
-		// Temperature:      new(float32),
+		MaxTokens: gpt3.IntPtr(4000),
 	}, func(resp *gpt3.CompletionResponse) {
 		fmt.Print(resp.Choices[0].Text)
 	})
